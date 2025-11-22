@@ -1,0 +1,14 @@
+package com.photon_dev.jwt_auth.config;
+
+import java.util.List;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
+import lombok.Data;
+
+@ConfigurationProperties(prefix = "app.security")
+@Data
+public class SecurityProperties {
+    private List<String> allowedOrigins = List.of("http://localhost:3000");
+    private List<String> publicEndpoints = List.of("/api/auth/**");
+}
