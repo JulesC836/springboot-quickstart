@@ -1,0 +1,26 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: self-hosted
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build service discovery service
+      run: docker build ./discovery --file Dockerfile --tag springboot-starter/discovery:$(date +%s)
+
+    - name: Buildi gateway
+      run: docker build ./gateway --file Dockerfile --tag springboot-starter/gateway:$(date +%s)
+      
+    - name: Authentification app
+      run: docker build ./auth-service --file Dockerfile --tag springboot-starter/auth:$(date +%s)
+      
+  
