@@ -15,12 +15,12 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build service discovery service
-      run: docker build --file discovery/Dockerfile --tag springboot-starter/discovery:$(date +%s)
+      run: docker build --file discovery/Dockerfile --tag springboot-starter/discovery:$(date +%s) ./discovery
 
     - name: Buildi gateway
-      run: docker build --file gateway/Dockerfile --tag springboot-starter/gateway:$(date +%s)
+      run: docker build --file gateway/Dockerfile --tag springboot-starter/gateway:$(date +%s) ./gateway
       
     - name: Authentification app
-      run: docker build --file auth-service/Dockerfile --tag springboot-starter/auth:$(date +%s)
+      run: docker build --file auth-service/Dockerfile --tag springboot-starter/auth:$(date +%s) ./auth-service
       
   
