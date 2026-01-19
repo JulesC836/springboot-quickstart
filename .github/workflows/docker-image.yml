@@ -14,13 +14,46 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+      with:
+       fetch-depth: 0
+
+    - name: Detect changed services
+      id: changes
+      shell: bash
+      run: |
+        CHANGED=$(git diff --name-only origin/main...HEAD)
+        echo "$CHANGED"
+  
+        build_discovery=false
+        build_gateway=false
+        build_auth=false
+        build_doc=false
+  
+        echo "$CHANGED" | grep -q '^services/service-discovery-app/' && build_discovery=true
+        echo "$CHANGED" | grep -q '^services/gateway-app/' && build_gateway=true
+        echo "$CHANGED" | grep -q '^services/auth-app/' && build_auth=true
+        echo "$CHANGED" | grep -q '^services/doc-app/' && build_doc=true
+  
+        echo "discovery=$build_discovery" >> $GITHUB_OUTPUT
+        echo "gateway=$build_gateway" >> $GITHUB_OUTPUT
+        echo "auth=$build_auth" >> $GITHUB_OUTPUT
+        echo "doc=$build_doc" >> $GITHUB_OUTPUT
+      
+       
     - name: Build service discovery service
-      run: docker build --file discovery/Dockerfile --tag springboot-starter/discovery:$(date +%s) ./discovery
+      if: steps.changes.outputs.discovery == 'true'
+      run: docker build --file discovery/Dockerfile --tag springboot-starter/discovery:${{github.sha}} ./discovery
 
     - name: Buildi gateway
-      run: docker build --file gateway/Dockerfile --tag springboot-starter/gateway:$(date +%s) ./gateway
+      if: steps.changes.outputs.gateway == 'true'
+      run: docker build --file gateway/Dockerfile --tag springboot-starter/gateway:${{github.sha}} ./gateway
       
     - name: Authentification app
-      run: docker build --file auth-service/Dockerfile --tag springboot-starter/auth:$(date +%s) ./auth-service
+      if: steps.changes.outputs.auth == 'true'
+      run: docker build --file auth-service/Dockerfile --tag springboot-starter/auth:${{github.sha}} ./auth-service
+
+    - name: Build doc image
+      if: steps.changes.outputs.doc == 'true'
+      run: docker build services/doc-app -t doc-hub/doc-app:${{ github.sha }} ./doc-app
       
   
