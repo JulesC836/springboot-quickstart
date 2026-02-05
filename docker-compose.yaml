@@ -1,0 +1,38 @@
+
+services:
+  cache_db:
+    image: redis:7.4-alpine
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - cache:/data
+
+  users_db:
+    image: mariadb
+    restart: always
+    environment:
+        MYSQL_ROOT_PASSWORD: "dontRush123"
+        MYSQL_USER: "default"
+        MYSQL_PASSWORD: "default-password"
+        MYSQL_DATABASE: "custom_users"
+    ports:
+      - "3306:3306"
+
+  discovery:
+    image: springboot-quick-starter/discovery:latest
+    container_name: DISCOVERY-APP
+
+  gateway:
+    image: springboot-quick-starter/gateway
+    container_name: GATEWAY-APP
+
+  auth:
+    image: springboot-quick-starter/auth
+    container_name: AUTH-APP
+
+volumes:
+  cache:
+    driver: local
+  users:
+    driver: local

@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.photon_dev.devcasern_project</groupId>
-	<artifactId>jwt-auth</artifactId>
+	<artifactId>auth-service</artifactId>
 	<version>1.0.1</version>
 	<name>Auth-service</name>
 	<description>Authentication service for devcasern</description>
@@ -35,7 +35,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
-			<version>3.5.3</version>
+            <version>3.5.8</version>
 		</dependency>
 
 

@@ -1,0 +1,50 @@
+
+
+management:
+  endpoints:
+    web:
+      cors:
+        allowed-origins:
+        - localhost:4200 
+        allowed-headers:
+        - Authorization
+
+spring:
+  application:
+    name: API-GATEWAY-SERVICE
+    
+  cloud:
+    gateway:
+      discovery:
+          locator:
+            enabled: true
+            lower-case-service-id: true
+      routes:
+        - id: AUTH-SERVICE
+          uri: http://localhost:8081
+          predicates:
+          - Path=/api/auth/**
+          filters:
+            - AddRequestHeader=X-From-Gateway, 3RBwxigR4E1E68qHyK24gArf
+            - AddResponseHeader=X-Authenticity-Ver, app-v-4
+            
+        - id: POST-SERVICE
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/post/**
+          filters:
+            - AddRequestHeader=X-From-Gateway, 3RBwxigR4E1E68qHyK24gArf
+            - AddResponseHeader=X-Authenticity-Ver, app-v-4
+            
+
+
+eureka:
+  instance:
+    prefer-ip-address: false
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+
+
