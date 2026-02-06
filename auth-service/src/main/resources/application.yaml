@@ -45,7 +45,7 @@ eureka:
     lease-expiration-duration-in-seconds: 30
 
   client:
-    enabled: false
+    enabled: true
     register-with-eureka: true
     fetch-registry: true
     service-url:

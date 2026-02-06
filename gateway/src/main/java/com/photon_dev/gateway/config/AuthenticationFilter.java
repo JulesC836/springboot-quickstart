@@ -1,6 +1,6 @@
 package com.photon_dev.gateway.config;
 
-
+import com.photon_dev.gateway.service.AuthService;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
@@ -18,13 +18,15 @@ import reactor.core.publisher.Mono;
 public class AuthenticationFilter extends AbstractGatewayFilterFactory<AuthenticationFilter.Config> {
 
     private final WebClient.Builder webClientBuilder;
+    private final AuthService authService;
 
-    public AuthenticationFilter(WebClient.Builder webClientBuilder) {
+    public AuthenticationFilter(WebClient.Builder webClientBuilder, AuthService authService) {
         super(Config.class);
         this.webClientBuilder = webClientBuilder;
+        this.authService = authService;
     }
 
-    public static class Config { /* Paramètres de config si besoin */ }
+    public static class Config {  }
 
     @Override
     public GatewayFilter apply(Config config) {
@@ -33,24 +35,18 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
             String token = exchange.getRequest().getHeaders().getFirst(HttpHeaders.AUTHORIZATION);
 
             if (token == null || !token.startsWith("Bearer ")) {
-                throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Token manquant");
+                return Mono.error(new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Token manquant, veuillez vous identifier"));
             }
 
-            // 2. Appeler le microservice d'Auth
-            return webClientBuilder.build()
-                    .post()
-                    .uri("lb://AUTH-SERVICE/auth/validate")
-                    .header(HttpHeaders.AUTHORIZATION, token)
-                    .retrieve()
-                    .bodyToMono(UserDTO.class) // Ton objet utilisateur
-                    .flatMap(user -> {
-                        // 3. Succès : On peut ajouter des infos dans les headers pour les services suivants
+            return authService.validateToken(token)
+                    .flatMap(user->{
                         exchange.getRequest().mutate()
                                 .header("X-User-Id", user.id().toString())
                                 .build();
                         return chain.filter(exchange);
-                    })
-                    .onErrorResume(e -> Mono.error(new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalide")));
+                    });
         };
+
+
     }
 }

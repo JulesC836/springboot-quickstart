@@ -1,3 +1,10 @@
 /home/jules/codenv/spring-boot/springboot-starter/gateway/src/main/java/com/photon_dev/gateway/GatewayApplication.java
-/home/jules/codenv/spring-boot/springboot-starter/gateway/src/main/java/com/photon_dev/gateway/config/AuthFilter.java
+/home/jules/codenv/spring-boot/springboot-starter/gateway/src/main/java/com/photon_dev/gateway/config/AuthenticationFilter.java
+/home/jules/codenv/spring-boot/springboot-starter/gateway/src/main/java/com/photon_dev/gateway/config/JwtFilter.java
+/home/jules/codenv/spring-boot/springboot-starter/gateway/src/main/java/com/photon_dev/gateway/config/RedisConfig.java
+/home/jules/codenv/spring-boot/springboot-starter/gateway/src/main/java/com/photon_dev/gateway/config/SecurityConfig.java
 /home/jules/codenv/spring-boot/springboot-starter/gateway/src/main/java/com/photon_dev/gateway/config/WebClientConfig.java
+/home/jules/codenv/spring-boot/springboot-starter/gateway/src/main/java/com/photon_dev/gateway/dto/UserDTO.java
+/home/jules/codenv/spring-boot/springboot-starter/gateway/src/main/java/com/photon_dev/gateway/service/AuthService.java
+/home/jules/codenv/spring-boot/springboot-starter/gateway/src/main/java/com/photon_dev/gateway/service/JwtService.java
+/home/jules/codenv/spring-boot/springboot-starter/gateway/src/main/java/com/photon_dev/gateway/service/TokenBlackListService.java
