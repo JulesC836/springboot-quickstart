@@ -9,11 +9,11 @@
 		<version>3.5.7</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.photon_dev.devcasern_project</groupId>
-	<artifactId>auth-service</artifactId>
+	<groupId>io.github.photondev.sdk.core</groupId>
+	<artifactId>auth</artifactId>
 	<version>1.0.1</version>
-	<name>Auth-service</name>
-	<description>Authentication service for devcasern</description>
+	<name>Auth-service </name>
+	<description>Authentication service for the starter sdk</description>
 	<url />
 	<licenses>
 		<license />

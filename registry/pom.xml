@@ -8,11 +8,11 @@
 		<version>3.5.9</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.photon_dev</groupId>
+	<groupId>io.github.photondev.sdk.core</groupId>
 	<artifactId>registry</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Service registry</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Service discovery and discovery app for the starter sdk</description>
 	<url/>
 	<licenses>
 		<license/>
