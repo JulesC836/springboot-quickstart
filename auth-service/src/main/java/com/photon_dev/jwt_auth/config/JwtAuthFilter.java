@@ -29,6 +29,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class JwtAuthFilter extends OncePerRequestFilter {
     private final JwtService jwtService;
+    private final JwtUtil jwtUtil;
     private final UserDetailsService userDetailsService;
     @Override
     protected void doFilterInternal(
@@ -56,7 +57,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             }
 
             // Extraire le nom d'utilisateur du token
-            final String username = jwtService.extractUsername(jwt);
+            final String username = jwtUtil.extractUsername(jwt);
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
             if (username != null && !username.trim().isEmpty() && authentication == null) {

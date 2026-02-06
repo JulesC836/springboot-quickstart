@@ -33,7 +33,6 @@ public class AuthController {
 
     private final AuthService authService;
     private final UserService userService;
-    private final JwtService jwtService;
     private final RedisTokenBlacklistService redisTokenBlacklistService;
 
     @GetMapping("/home")
@@ -66,7 +65,7 @@ public class AuthController {
                     token);
             return ResponseEntity.ok(authedUser);
         } catch (BadCredentialsException e) {
-            return new ResponseEntity<>("Mauvaises informations d'identification pour: {} "+ cred.getUsername(), HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>("Mauvaises informations d'identification pour: "+ cred.getUsername(), HttpStatus.NOT_FOUND);
         } catch (Exception e) {
             return new ResponseEntity<>("Erreur d'authentification: " + e.getMessage(), HttpStatus.BAD_REQUEST);
         }
@@ -79,12 +78,10 @@ public class AuthController {
         // 1. Extraire et valider le jeton (Signature, Expiration, etc.)
         String token = authorizationHeader.substring(7);
 
-        if (jwtService.isTokenValid(token, null)) {
+        if ( authService.validate(token)) {
             // 2. Extraire les données de l'utilisateur du jeton (ou d'une BDD)
-            String userId = jwtService.extractUsername(token);
-            String roles = jwtService.extractRoles(token);
 
-            AuthValidationResponse response = new AuthValidationResponse(userId, roles);
+            AuthValidationResponse response = new AuthValidationResponse(authService.getUserId(token), authService.getUserRole(token));
             return ResponseEntity.ok(response);
         } else {
             // Jeton invalide

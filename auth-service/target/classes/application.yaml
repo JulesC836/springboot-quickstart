@@ -5,6 +5,11 @@ project:
   build:
     directory: target/
 
+info:
+  app:
+    name: "Auth service"
+    version: "1.0.0"
+    description: "Microservice d'authentification"
 
 spring:
   config:
@@ -34,9 +39,23 @@ logging:
 eureka:
   instance:
     prefer-ip-address: false
+    # Fréquence d'envoi des heartbeats (défaut: 30s)
+    lease-renewal-interval-in-seconds: 10
+    # Temps avant que le serveur considère l'instance comme morte (défaut: 90s)
+    lease-expiration-duration-in-seconds: 30
+
   client:
-    enabled: true
+    enabled: false
     register-with-eureka: true
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"

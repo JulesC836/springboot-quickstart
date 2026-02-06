@@ -1,5 +1,6 @@
 package com.photon_dev.jwt_auth.service;
 
+import com.photon_dev.jwt_auth.config.JwtUtil;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -22,6 +23,8 @@ public class AuthService {
     private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
+    private final RedisTokenBlacklistService tokenBlacklistService;
+    private final JwtUtil jwtUtil;
 
     public User signUp(RegisterRequest request) throws Exception {
         // Vérifier si l'utilisateur existe déjà
@@ -54,5 +57,17 @@ public class AuthService {
 
         return token;
 
+    }
+
+    public boolean validate(String token){
+        return (jwtService.isTokenValid(token, null) && !tokenBlacklistService.isBlacklisted(token));
+    }
+
+    public String getUserId(String token){
+        return jwtUtil.extractUsername(token);
+    }
+
+    public String getUserRole(String token){
+        return jwtUtil.extractRoles(token);
     }
 }

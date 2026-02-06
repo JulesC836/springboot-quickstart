@@ -1,10 +1,11 @@
-package com.example.registry;
+package com.photon_dev.registry;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+@EnableEurekaServer
+public class RegistryApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);

@@ -2,6 +2,7 @@
 /home/jules/codenv/spring-boot/springboot-starter/auth-service/src/main/java/com/photon_dev/jwt_auth/config/ApplicationConfig.java
 /home/jules/codenv/spring-boot/springboot-starter/auth-service/src/main/java/com/photon_dev/jwt_auth/config/BlacklistFilter.java
 /home/jules/codenv/spring-boot/springboot-starter/auth-service/src/main/java/com/photon_dev/jwt_auth/config/JwtAuthFilter.java
+/home/jules/codenv/spring-boot/springboot-starter/auth-service/src/main/java/com/photon_dev/jwt_auth/config/JwtUtil.java
 /home/jules/codenv/spring-boot/springboot-starter/auth-service/src/main/java/com/photon_dev/jwt_auth/config/SecurityConfig.java
 /home/jules/codenv/spring-boot/springboot-starter/auth-service/src/main/java/com/photon_dev/jwt_auth/config/SecurityProperties.java
 /home/jules/codenv/spring-boot/springboot-starter/auth-service/src/main/java/com/photon_dev/jwt_auth/controller/AuthController.java
