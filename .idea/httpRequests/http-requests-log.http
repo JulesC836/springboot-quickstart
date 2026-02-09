@@ -1,0 +1,580 @@
+POST http://localhost:8080/api/auth/login/
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username":"Jules@gmail.com",
+  "password":"password"
+}
+
+<> 2026-02-09T084556.200.json
+
+###
+
+POST http://localhost:8080/api/auth/register/
+Content-Type: application/json
+Content-Length: 93
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+"name":"Jules César",
+"username":"Jules@gmail.com",
+"password":"password",
+"role":"User"
+}
+
+<> 2026-02-09T084547.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login/
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username":"Jules@gmail.com",
+  "password":"password"
+}
+
+<> 2026-02-09T084525.503.json
+
+###
+
+POST http://localhost:8080/api/auth/login/
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username":"Jules@gmail.com",
+  "password":"password"
+}
+
+<> 2026-02-09T084129.503.json
+
+###
+
+POST http://localhost:8080/api/auth/logout/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2NDIwMSwiZXhwIjoxNzcwNDY3ODAxLCJpc3MiOiJ5b3VyLWFwcCJ9.2b5TNbOBIQVwahqG0NKqlDE_45OpPDp2M2A5jFB65J8
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+POST http://localhost:8080/api/auth/logout/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2NDIwMSwiZXhwIjoxNzcwNDY3ODAxLCJpc3MiOiJ5b3VyLWFwcCJ9.2b5TNbOBIQVwahqG0NKqlDE_45OpPDp2M2A5jFB65J8
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2026-02-07T113742.200.txt
+
+###
+
+POST http://localhost:8080/api/auth/logout/
+Authorization: BearereyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2NDIwMSwiZXhwIjoxNzcwNDY3ODAxLCJpc3MiOiJ5b3VyLWFwcCJ9.2b5TNbOBIQVwahqG0NKqlDE_45OpPDp2M2A5jFB65J8
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2026-02-07T113735.400.txt
+
+###
+
+POST http://localhost:8080/api/auth/login/
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username":"Jules@gmail.com",
+  "password":"password"
+}
+
+<> 2026-02-07T113643.200.json
+
+###
+
+POST http://localhost:8081/api/auth/register/
+Content-Type: application/json
+Content-Length: 93
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+"name":"Jules César",
+"username":"Jules@gmail.com",
+"password":"password",
+"role":"User"
+}
+
+<> 2026-02-07T113636.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login/
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username":"Jules@gmail.com",
+  "password":"password"
+}
+
+<> 2026-02-07T113601.404.txt
+
+###
+
+POST http://localhost:8080/api/auth/logout/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2MzUzMSwiZXhwIjoxNzcwNDY3MTMxLCJpc3MiOiJ5b3VyLWFwcCJ9.o0Mc_f_UsqooAU7y81DZe5tVzqwDNTpkxcAbhIVcWqw
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+GET http://localhost:8080/api/auth/home
+Authorization: bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2MTMyOSwiZXhwIjoxNzcwNDY0OTI5LCJpc3MiOiJ5b3VyLWFwcCJ9.OtO0DWFxQyAKEe94RpJvyftcPB_x-CiUbBtqXHGa178
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2026-02-07T113531.200.txt
+
+###
+
+POST http://localhost:8080/api/auth/logout/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2MzUzMSwiZXhwIjoxNzcwNDY3MTMxLCJpc3MiOiJ5b3VyLWFwcCJ9.o0Mc_f_UsqooAU7y81DZe5tVzqwDNTpkxcAbhIVcWqw
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+GET http://localhost:8081/api/auth/home
+Authorization: bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2MTMyOSwiZXhwIjoxNzcwNDY0OTI5LCJpc3MiOiJ5b3VyLWFwcCJ9.OtO0DWFxQyAKEe94RpJvyftcPB_x-CiUbBtqXHGa178
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2026-02-07T113455.200.txt
+
+###
+
+POST http://localhost:8080/api/auth/logout/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2MzUzMSwiZXhwIjoxNzcwNDY3MTMxLCJpc3MiOiJ5b3VyLWFwcCJ9.o0Mc_f_UsqooAU7y81DZe5tVzqwDNTpkxcAbhIVcWqw
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2026-02-07T113422.503.json
+
+###
+
+POST http://localhost:8080/api/auth/logout/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2MzUzMSwiZXhwIjoxNzcwNDY3MTMxLCJpc3MiOiJ5b3VyLWFwcCJ9.o0Mc_f_UsqooAU7y81DZe5tVzqwDNTpkxcAbhIVcWqw
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2026-02-07T113325.500.json
+
+###
+
+POST http://localhost:8080/api/auth/logout/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2MzUzMSwiZXhwIjoxNzcwNDY3MTMxLCJpc3MiOiJ5b3VyLWFwcCJ9.o0Mc_f_UsqooAU7y81DZe5tVzqwDNTpkxcAbhIVcWqw
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+POST http://localhost:8080/api/auth/logout/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2MzUzMSwiZXhwIjoxNzcwNDY3MTMxLCJpc3MiOiJ5b3VyLWFwcCJ9.o0Mc_f_UsqooAU7y81DZe5tVzqwDNTpkxcAbhIVcWqw
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+POST http://localhost:8080/api/auth/logout/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2MzUzMSwiZXhwIjoxNzcwNDY3MTMxLCJpc3MiOiJ5b3VyLWFwcCJ9.o0Mc_f_UsqooAU7y81DZe5tVzqwDNTpkxcAbhIVcWqw
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+POST http://localhost:8080/api/auth/logout/
+Authorization: Rearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2MzUzMSwiZXhwIjoxNzcwNDY3MTMxLCJpc3MiOiJ5b3VyLWFwcCJ9.o0Mc_f_UsqooAU7y81DZe5tVzqwDNTpkxcAbhIVcWqw
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2026-02-07T112900.200.txt
+
+###
+
+POST http://localhost:8080/api/auth/logout/
+Authorization: bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2MzUzMSwiZXhwIjoxNzcwNDY3MTMxLCJpc3MiOiJ5b3VyLWFwcCJ9.o0Mc_f_UsqooAU7y81DZe5tVzqwDNTpkxcAbhIVcWqw
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2026-02-07T112616.400.txt
+
+###
+
+POST http://localhost:8080/api/auth/logout/
+Authorization: bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2MzUzMSwiZXhwIjoxNzcwNDY3MTMxLCJpc3MiOiJ5b3VyLWFwcCJ9.o0Mc_f_UsqooAU7y81DZe5tVzqwDNTpkxcAbhIVcWqw
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2026-02-07T112604.200.txt
+
+###
+
+POST http://localhost:8080/api/auth/login/
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username":"Jules@gmail.com",
+  "password":"password"
+}
+
+<> 2026-02-07T112531.200.json
+
+###
+
+GET http://localhost:8081/api/auth/home
+Authorization: bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2MTMyOSwiZXhwIjoxNzcwNDY0OTI5LCJpc3MiOiJ5b3VyLWFwcCJ9.OtO0DWFxQyAKEe94RpJvyftcPB_x-CiUbBtqXHGa178
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2026-02-07T112251.200.txt
+
+###
+
+GET http://localhost:8081/api/auth/home
+Authorization: bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2MTMyOSwiZXhwIjoxNzcwNDY0OTI5LCJpc3MiOiJ5b3VyLWFwcCJ9.OtO0DWFxQyAKEe94RpJvyftcPB_x-CiUbBtqXHGa178
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2026-02-07T112248.200.txt
+
+###
+
+GET http://localhost:8081/api/auth/home
+Authorization: bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2MTMyOSwiZXhwIjoxNzcwNDY0OTI5LCJpc3MiOiJ5b3VyLWFwcCJ9.OtO0DWFxQyAKEe94RpJvyftcPB_x-CiUbBtqXHGa178
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2026-02-07T112243.200.txt
+
+###
+
+POST http://localhost:8081/api/auth/home/
+Authorization: bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2MTMyOSwiZXhwIjoxNzcwNDY0OTI5LCJpc3MiOiJ5b3VyLWFwcCJ9.OtO0DWFxQyAKEe94RpJvyftcPB_x-CiUbBtqXHGa178
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2026-02-07T112135.404.json
+
+###
+
+POST http://localhost:8081/api/auth/logout/
+Authorization: bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2MTMyOSwiZXhwIjoxNzcwNDY0OTI5LCJpc3MiOiJ5b3VyLWFwcCJ9.OtO0DWFxQyAKEe94RpJvyftcPB_x-CiUbBtqXHGa178
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2026-02-07T111525.200.txt
+
+###
+
+POST http://localhost:8081/api/auth/logout/
+Authorization: bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2MTMyOSwiZXhwIjoxNzcwNDY0OTI5LCJpc3MiOiJ5b3VyLWFwcCJ9.OtO0DWFxQyAKEe94RpJvyftcPB_x-CiUbBtqXHGa178
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2026-02-07T111521.200.txt
+
+###
+
+POST http://localhost:8081/api/auth/logout/
+Authorization: bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2MTMyOSwiZXhwIjoxNzcwNDY0OTI5LCJpc3MiOiJ5b3VyLWFwcCJ9.OtO0DWFxQyAKEe94RpJvyftcPB_x-CiUbBtqXHGa178
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2026-02-07T111210.200.txt
+
+###
+
+POST http://localhost:8080/api/auth/login/
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username":"Jules@gmail.com",
+  "password":"password"
+}
+
+<> 2026-02-07T111210.200.json
+
+###
+
+POST http://localhost:8081/api/auth/register/
+Content-Type: application/json
+Content-Length: 93
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+"name":"Jules César",
+"username":"Jules@gmail.com",
+"password":"password",
+"role":"User"
+}
+
+<> 2026-02-07T111209.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login/
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username":"Jules@gmail.com",
+  "password":"password"
+}
+
+<> 2026-02-07T111142.404.txt
+
+###
+
+POST http://localhost:8080/api/auth/login/
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username":"Jules@gmail.com",
+  "password":"password"
+}
+
+<> 2026-02-07T111049.503.json
+
+###
+
+POST http://localhost:8080/api/auth/login/
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username":"Jules@gmail.com",
+  "password":"password"
+}
+
+<> 2026-02-07T105745.503.json
+
+###
+
+POST http://localhost:8080/api/auth/login/
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username":"Jules@gmail.com",
+  "password":"password"
+}
+
+<> 2026-02-07T105122.200.json
+
+###
+
+POST http://localhost:8081/api/auth/logout/
+Authorization: bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2MTMyOSwiZXhwIjoxNzcwNDY0OTI5LCJpc3MiOiJ5b3VyLWFwcCJ9.OtO0DWFxQyAKEe94RpJvyftcPB_x-CiUbBtqXHGa178
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2026-02-07T104937.200.txt
+
+###
+
+POST http://localhost:8081/api/auth/login/
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username":"Jules@gmail.com",
+  "password":"password"
+}
+
+<> 2026-02-07T104850.200.json
+
+###
+
+POST http://localhost:8081/api/auth/register/
+Content-Type: application/json
+Content-Length: 93
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+"name":"Jules César",
+"username":"Jules@gmail.com",
+"password":"password",
+"role":"User"
+}
+
+<> 2026-02-07T104754.200.json
+
+###
+
+POST http://localhost:8081/api/auth/logout/
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2026-02-07T104705.400.json
+
+###
+
+POST http://localhost:8081/api/auth/logout/
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2026-02-07T104702.400.json
+
+###
+
+POST http://localhost:8081/api/auth/logout/
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2026-02-07T104655.400.json
+
+###
+
+POST http://localhost:8081/api/auth/logout/
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2026-02-07T104554.400.json
+
+###
+
+POST http://localhost:8081/api/auth/logout/
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2026-02-07T104403.400.json
+
+###
+
+POST http://localhost:8081/api/auth/logout/
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2026-02-07T104254.400.json
+
+###
+
+POST http://localhost:8081/api/auth/logout/
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2026-02-07T104240.400.json
+
+###
+
+POST http://localhost:8081/api/auth/logout/
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2026-02-07T104202.400.json
+
+###
+

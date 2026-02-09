@@ -1,0 +1,7 @@
+{
+  "name": "Jules César",
+  "username": "Jules@gmail.com",
+  "role": "USER",
+  "access_token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWxlc0BnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlhdCI6MTc3MDQ2MzUzMSwiZXhwIjoxNzcwNDY3MTMxLCJpc3MiOiJ5b3VyLWFwcCJ9.o0Mc_f_UsqooAU7y81DZe5tVzqwDNTpkxcAbhIVcWqw",
+  "refresh_token": null
+}

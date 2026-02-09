@@ -1,5 +1,6 @@
 package io.github.photondev.sdk.core.auth.controller;
 
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.github.photondev.sdk.core.auth.dto.LoginRequest;
@@ -39,7 +40,7 @@ public class AuthController {
     }
 
     @PostMapping("/register/")
-    public ResponseEntity<?> saveUser(@RequestBody RegisterRequest request) throws Exception {
+    public ResponseEntity<?> saveUser(@Valid @RequestBody RegisterRequest request) throws Exception {
         request.setRole("USER");
         try {
             User user = authService.signUp(request);
@@ -52,7 +53,7 @@ public class AuthController {
     }
 
     @PostMapping("/login/")
-    public ResponseEntity<?> Authenticate(@RequestBody LoginRequest cred) throws Exception {
+    public ResponseEntity<?> Authenticate(@Valid @RequestBody LoginRequest cred) throws Exception {
         try {
 
             String token = authService.login(cred);
@@ -88,7 +89,7 @@ public class AuthController {
     }
 
     @PostMapping("/control/register/")
-    public ResponseEntity<?> saveAdmin(@RequestBody RegisterRequest request) throws Exception {
+    public ResponseEntity<?> saveAdmin(@Valid @RequestBody RegisterRequest request) throws Exception {
         request.setRole("ADMIN");
         User user = authService.signUp(request);
         if (user == null) {

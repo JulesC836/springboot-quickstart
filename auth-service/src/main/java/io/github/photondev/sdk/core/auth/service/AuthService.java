@@ -1,6 +1,7 @@
 package io.github.photondev.sdk.core.auth.service;
 
 import io.github.photondev.sdk.core.auth.config.JwtUtil;
+import jakarta.validation.Valid;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;

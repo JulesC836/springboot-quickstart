@@ -40,27 +40,31 @@ spring:
     
   cloud:
     gateway:
-      discovery:
-          locator:
-            enabled: true
-            lower-case-service-id: true
-      routes:
-        - id: AUTH-SERVICE
-          uri: http://localhost:8081
-          predicates:
-          - Path=/api/auth/**
-          filters:
-            - AddRequestHeader=X-From-Gateway, 3RBwxigR4E1E68qHyK24gArf
-            - AddResponseHeader=X-Authenticity-Ver, app-v-4
-            
-        - id: POST-SERVICE
-          uri: http://localhost:8082
-          predicates:
-            - Path=/api/post/**
-          filters:
-            - AddRequestHeader=X-From-Gateway, 3RBwxigR4E1E68qHyK24gArf
-            - AddResponseHeader=X-Authenticity-Ver, app-v-4
-            
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: true
+              lower-case-service-id: true
+
+          routes:
+            - id: AUTH-SERVICE
+              uri: lb://AUTH-SERVICE
+              predicates:
+              - Path=/api/auth/**
+              filters:
+              - AddRequestHeader=X-From-Gateway, 3RBwxigR4E1E68qHyK24gArf
+              - AddResponseHeader=X-Authenticity-Ver, app-v-4
+
+            - id: POST-SERVICE
+              uri: lb://POST-SERVICE
+              predicates:
+              - Path=/api/post/**
+              filters:
+              - AddRequestHeader=X-From-Gateway, 3RBwxigR4E1E68qHyK24gArf
+              - AddResponseHeader=X-Authenticity-Ver, app-v-4
+
+
 
 
 eureka:
@@ -74,6 +78,8 @@ eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
+#    service-url:
+#      defaultZone: http://REGISTRY-APP:8761/eureka/
     service-url:
       defaultZone: http://localhost:8761/eureka/
 

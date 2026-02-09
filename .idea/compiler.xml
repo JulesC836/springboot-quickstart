@@ -7,21 +7,25 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="auth-app" />
-        <module name="gateway" />
+        <module name="registry" />
         <module name="jwt-auth" />
+        <module name="auth" />
+        <module name="gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="auth-app" target="17" />
       <module name="discovery" target="21" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="auth" options="-parameters" />
       <module name="auth-app" options="-parameters" />
       <module name="discovery" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="jwt-auth" options="-parameters" />
+      <module name="registry" options="-parameters" />
     </option>
   </component>
 </project>

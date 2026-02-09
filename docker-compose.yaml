@@ -7,32 +7,73 @@ services:
       - "6379:6379"
     volumes:
       - cache:/data
+#    networks:
+#      - user-cache-net
 
   users_db:
     image: mariadb
     restart: always
     environment:
-        MYSQL_ROOT_PASSWORD: "dontRush123"
+        MYSQL_ROOT_PASSWORD: "JC001"
         MYSQL_USER: "default"
         MYSQL_PASSWORD: "default-password"
         MYSQL_DATABASE: "custom_users"
     ports:
       - "3306:3306"
 
+#    networks:
+#      - auth-db-net
+
   discovery:
+    build: ./registry
+    pull_policy: never
     image: springboot-quick-starter/discovery:latest
     container_name: DISCOVERY-APP
+#    networks:
+#      - entry-net
 
   gateway:
+    build: ./gateway
+    pull_policy: never
     image: springboot-quick-starter/gateway
     container_name: GATEWAY-APP
+    depends_on:
+      - auth
+    ports:
+      - "8080:8080"
+#    networks:
+#      - entry-net
+#      - user-cache-net
 
   auth:
+    build: ./auth-service
+    pull_policy: never
     image: springboot-quick-starter/auth
     container_name: AUTH-APP
+    environment:
+      # On remplace localhost par le nom du service mariadb-db
+      - SPRING_DATASOURCE_URL=jdbc:mariadb://users_db:3306/photon_auth
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=JC001
+    depends_on:
+      - users_db
+#    networks:
+#      - auth-db-net
+#      - entry-net
+#      - user-cache-net
 
 volumes:
   cache:
     driver: local
   users:
     driver: local
+
+#networks:
+#  entry-net:
+#    driver: bridge
+#  auth-db-net:
+#    driver: bridge
+#  user-cache-net:
+#    driver: bridge
+
+
