@@ -104,6 +104,9 @@ public class AuthController {
         // 1. Extraire et valider le jeton (Signature, Expiration, etc.)
         String token = authorizationHeader.substring(7);
         try{
+            if (redisTokenBlacklistService.isBlacklisted(token)){
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Votre session est déjà suspendue");
+            }
             redisTokenBlacklistService.add(token);
             return ResponseEntity.ok("Vous avez été déconnecté");
         }catch(Exception e){
